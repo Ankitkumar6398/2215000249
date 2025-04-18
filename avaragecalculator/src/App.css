@@ -1,38 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f4f8;
+  color: #333;
+}
+
 .App {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Buttons & Inputs */
+.button-group, .fetch-id {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  background-color: #303f9f;
+}
+
+input[type="number"] {
+  padding: 0.6rem 1rem;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+/* Results */
+.results {
+  margin-top: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.results h2 {
+  margin-bottom: 0.5rem;
+  color: #3f51b5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .button-group, .fetch-id {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .results {
+    padding: 1.5rem;
   }
 }
